@@ -13,5 +13,5 @@ script:
   - docker run centos /bin/bash -c 'bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
   - docker run debian /bin/bash -c 'apt-get install -y curl&&bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
   - docker run fedora /bin/bash -c 'bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
-  - docker run opensuse /bin/bash -c 'zypper install -n curl&&bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
+  - docker run opensuse /bin/bash -c 'zypper install --non-interactive curl&&bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
   - docker run base/archlinux /bin/bash -c 'pacman -Sy&&bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
