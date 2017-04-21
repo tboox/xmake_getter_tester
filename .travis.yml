@@ -9,9 +9,9 @@ install:
   - docker pull opensuse
   - docker pull base/archlinux
 script:
-  - docker run ubuntu /bin/bash -c 'bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
+  - docker run ubuntu /bin/bash -c 'apt-get install -y curl&&bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
   - docker run centos /bin/bash -c 'bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
-  - docker run debian /bin/bash -c 'bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
+  - docker run debian /bin/bash -c 'apt-get install -y curl&&bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
   - docker run fedora /bin/bash -c 'bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
-  - docker run opensuse /bin/bash -c 'bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
-  - docker run base/archlinux /bin/bash -c 'bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
+  - docker run opensuse /bin/bash -c 'zypper install -n curl&&bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
+  - docker run base/archlinux /bin/bash -c 'pacman -Sy&&bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
