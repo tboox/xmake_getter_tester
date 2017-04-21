@@ -1,0 +1,17 @@
+sudo: required
+services:
+  - docker
+install:
+  - docker pull ubuntu
+  - docker pull centos
+  - docker pull debian
+  - docker pull fedora
+  - docker pull opensuse
+  - docker pull base/archlinux
+script:
+  - docker run ubuntu /bin/bash -c 'bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
+  - docker run centos /bin/bash -c 'bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
+  - docker run debian /bin/bash -c 'bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
+  - docker run fedora /bin/bash -c 'bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
+  - docker run opensuse /bin/bash -c 'bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
+  - docker run base/archlinux /bin/bash -c 'bash <(curl -s https://raw.githubusercontent.com/TitanSnow/xmake/get/scripts/get.sh)'
